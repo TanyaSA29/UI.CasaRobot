@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace CasaRobot.UI
 {
-    public partial class FrmIniciarSesion : Form
+    public partial class FrmIniciaSesion : Form
     {
-        public FrmIniciarSesion()
+        public FrmIniciaSesion()
         {
             InitializeComponent();
         }
@@ -43,20 +43,25 @@ namespace CasaRobot.UI
 
         private void textIngresarUsuario_Enter(object sender, EventArgs e)
         {
-            if (textIngresarUsuario.Text == "Usuario")
+            if (txtIngresarUsuario.Text == "Usuario")
             {
-                textIngresarUsuario.Text = "";
-                textIngresarUsuario.ForeColor = Color.Black;
+                txtIngresarUsuario.Text = "";
+                txtIngresarUsuario.ForeColor = Color.Black;
             }
         }
 
         private void textIngresarUsuario_Leave(object sender, EventArgs e)
         {
-            if (textIngresarUsuario.Text == "")
+            if (txtIngresarUsuario.Text == "")
             {
-                textIngresarUsuario.Text = "Usuario";
-                textIngresarUsuario.ForeColor = Color.Silver;
+                txtIngresarUsuario.Text = "Usuario";
+                txtIngresarUsuario.ForeColor = Color.Silver;
             }
+        }
+
+        private void panelIniciar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

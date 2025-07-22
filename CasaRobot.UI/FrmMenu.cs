@@ -84,7 +84,7 @@ namespace CasaRobot.UI
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             activatebutton(sender, RGBColors.color1);
-            OpenChildForm(new FrmIniciarSesion());
+            OpenChildForm(new FrmIniciaSesion());
         }
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)

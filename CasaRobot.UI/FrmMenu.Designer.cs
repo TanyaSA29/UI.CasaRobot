@@ -44,6 +44,9 @@
             IconoCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             panelSombra = new Panel();
             panelDesktop = new Panel();
+            label2 = new Label();
+            lblVision = new Label();
+            LblContenido = new Label();
             label1 = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
@@ -130,7 +133,7 @@
             btnCrearUsuario.Padding = new Padding(10, 0, 0, 0);
             btnCrearUsuario.Size = new Size(220, 60);
             btnCrearUsuario.TabIndex = 2;
-            btnCrearUsuario.Text = "Crear Usuario";
+            btnCrearUsuario.Text = "Registrate";
             btnCrearUsuario.TextAlign = ContentAlignment.MiddleLeft;
             btnCrearUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCrearUsuario.UseVisualStyleBackColor = true;
@@ -160,6 +163,7 @@
             // 
             // panelLogo
             // 
+            panelLogo.BackColor = Color.FromArgb(100, 149, 250);
             panelLogo.Controls.Add(btnLogo);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
@@ -196,7 +200,7 @@
             // iconCerrar
             // 
             iconCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconCerrar.BackColor = Color.FromArgb(100, 139, 230);
+            iconCerrar.BackColor = Color.FromArgb(100, 139, 215);
             iconCerrar.ForeColor = SystemColors.ControlText;
             iconCerrar.IconChar = FontAwesome.Sharp.IconChar.X;
             iconCerrar.IconColor = SystemColors.ControlText;
@@ -213,7 +217,7 @@
             // iconMaximizar
             // 
             iconMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconMaximizar.BackColor = Color.FromArgb(100, 139, 230);
+            iconMaximizar.BackColor = Color.FromArgb(100, 139, 215);
             iconMaximizar.ForeColor = SystemColors.ControlText;
             iconMaximizar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
             iconMaximizar.IconColor = SystemColors.ControlText;
@@ -230,7 +234,7 @@
             // iconMinimizar
             // 
             iconMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            iconMinimizar.BackColor = Color.FromArgb(100, 139, 230);
+            iconMinimizar.BackColor = Color.FromArgb(100, 139, 215);
             iconMinimizar.ForeColor = SystemColors.InfoText;
             iconMinimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             iconMinimizar.IconColor = SystemColors.InfoText;
@@ -279,24 +283,72 @@
             // panelDesktop
             // 
             panelDesktop.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panelDesktop.BackColor = Color.FromArgb(100, 139, 230);
+            panelDesktop.BackColor = Color.White;
             panelDesktop.Controls.Add(label1);
+            panelDesktop.Controls.Add(label2);
+            panelDesktop.Controls.Add(lblVision);
+            panelDesktop.Controls.Add(LblContenido);
             panelDesktop.Location = new Point(220, 79);
             panelDesktop.Name = "panelDesktop";
             panelDesktop.Size = new Size(701, 580);
             panelDesktop.TabIndex = 3;
             // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.None;
+            label2.AutoSize = true;
+            label2.BackColor = Color.FromArgb(245, 250, 255);
+            label2.FlatStyle = FlatStyle.Popup;
+            label2.Font = new Font("Sans Serif Collection", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(246, 49);
+            label2.Name = "label2";
+            label2.Size = new Size(215, 72);
+            label2.TabIndex = 4;
+            label2.Text = "¿Quienes Somos?";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblVision
+            // 
+            lblVision.Anchor = AnchorStyles.None;
+            lblVision.AutoSize = true;
+            lblVision.BackColor = Color.FromArgb(249, 250, 255);
+            lblVision.Font = new Font("Sans Serif Collection", 9.749998F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblVision.Location = new Point(22, 279);
+            lblVision.Margin = new Padding(0);
+            lblVision.Name = "lblVision";
+            lblVision.Size = new Size(382, 132);
+            lblVision.TabIndex = 0;
+            lblVision.Text = "        VISION\r\nSer una empresa confiable y reconocida por nuestra eficiencia,\r\n compromiso y atención cercana.";
+            lblVision.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // LblContenido
+            // 
+            LblContenido.Anchor = AnchorStyles.None;
+            LblContenido.AutoSize = true;
+            LblContenido.BackColor = Color.FromArgb(245, 250, 255);
+            LblContenido.FlatStyle = FlatStyle.Popup;
+            LblContenido.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LblContenido.Location = new Point(51, 121);
+            LblContenido.Margin = new Padding(0);
+            LblContenido.Name = "LblContenido";
+            LblContenido.Size = new Size(638, 102);
+            LblContenido.TabIndex = 0;
+            LblContenido.Text = "Somos una empresa local especializada en el mantenimiento y reparación de computadoras.\r\n Ofrecemos soluciones rápidas, confiables y personalizadas para hogares y negocios.";
+            LblContenido.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top;
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(90, 139, 230);
-            label1.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(185, 142);
+            label1.BackColor = Color.FromArgb(249, 255, 255);
+            label1.Font = new Font("Sans Serif Collection", 9.749998F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(296, 423);
+            label1.Margin = new Padding(0);
             label1.Name = "label1";
-            label1.Size = new Size(385, 324);
-            label1.TabIndex = 2;
-            label1.Text = resources.GetString("label1.Text");
+            label1.Size = new Size(393, 132);
+            label1.TabIndex = 5;
+            label1.Text = "        MISION  \r\nBrindar servicios técnicos de calidad que mejoren el rendimiento\r\n y vida útil de los equipos de nuestros clientes..";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmMenu
             // 
@@ -342,6 +394,9 @@
         private FontAwesome.Sharp.IconPictureBox iconMinimizar;
         private FontAwesome.Sharp.IconPictureBox iconCerrar;
         private FontAwesome.Sharp.IconPictureBox iconMaximizar;
+        private Label LblContenido;
+        private Label label2;
+        private Label lblVision;
         private Label label1;
     }
 }
