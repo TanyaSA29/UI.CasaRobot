@@ -29,9 +29,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controlador\" />
-    <Folder Include="Modelo\DTOs\" />
-  </ItemGroup>
-
 </Project>

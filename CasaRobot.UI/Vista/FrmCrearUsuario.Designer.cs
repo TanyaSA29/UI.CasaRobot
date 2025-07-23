@@ -31,21 +31,17 @@
             panelCrearUsuario = new Panel();
             iconRegistrate = new FontAwesome.Sharp.IconPictureBox();
             lblTitleR = new Label();
-            lblTipoUsuario = new Label();
-            button5 = new Button();
             button4 = new Button();
             button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
             btn2nousar = new Button();
             txtTelefono = new TextBox();
             txtCorreo = new TextBox();
-            cmbTipoUsuario = new ComboBox();
-            txtApellido = new TextBox();
             txtNombre = new TextBox();
             btnRegistrar = new Button();
             txtDireccion = new TextBox();
-            txtContraseña = new TextBox();
+            txtIDCliente = new TextBox();
+            button2 = new Button();
             panelCrearUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconRegistrate).BeginInit();
             SuspendLayout();
@@ -55,23 +51,19 @@
             panelCrearUsuario.Anchor = AnchorStyles.None;
             panelCrearUsuario.BackColor = Color.White;
             panelCrearUsuario.BackgroundImageLayout = ImageLayout.None;
+            panelCrearUsuario.Controls.Add(button2);
+            panelCrearUsuario.Controls.Add(txtIDCliente);
             panelCrearUsuario.Controls.Add(iconRegistrate);
             panelCrearUsuario.Controls.Add(lblTitleR);
-            panelCrearUsuario.Controls.Add(lblTipoUsuario);
-            panelCrearUsuario.Controls.Add(button5);
             panelCrearUsuario.Controls.Add(button4);
             panelCrearUsuario.Controls.Add(button3);
-            panelCrearUsuario.Controls.Add(button2);
             panelCrearUsuario.Controls.Add(button1);
             panelCrearUsuario.Controls.Add(btn2nousar);
             panelCrearUsuario.Controls.Add(txtTelefono);
             panelCrearUsuario.Controls.Add(txtCorreo);
-            panelCrearUsuario.Controls.Add(cmbTipoUsuario);
-            panelCrearUsuario.Controls.Add(txtApellido);
             panelCrearUsuario.Controls.Add(txtNombre);
             panelCrearUsuario.Controls.Add(btnRegistrar);
             panelCrearUsuario.Controls.Add(txtDireccion);
-            panelCrearUsuario.Controls.Add(txtContraseña);
             panelCrearUsuario.ForeColor = Color.White;
             panelCrearUsuario.Location = new Point(23, 12);
             panelCrearUsuario.Name = "panelCrearUsuario";
@@ -103,34 +95,13 @@
             lblTitleR.TabIndex = 66;
             lblTitleR.Text = "RELLENA EL FORMULARIO";
             // 
-            // lblTipoUsuario
-            // 
-            lblTipoUsuario.AutoSize = true;
-            lblTipoUsuario.Font = new Font("Sans Serif Collection", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTipoUsuario.ForeColor = Color.MidnightBlue;
-            lblTipoUsuario.Location = new Point(40, 145);
-            lblTipoUsuario.Name = "lblTipoUsuario";
-            lblTipoUsuario.Size = new Size(87, 54);
-            lblTipoUsuario.TabIndex = 64;
-            lblTipoUsuario.Text = "Usuario:";
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.MidnightBlue;
-            button5.Enabled = false;
-            button5.Location = new Point(347, 222);
-            button5.Name = "button5";
-            button5.Size = new Size(260, 2);
-            button5.TabIndex = 63;
-            button5.UseVisualStyleBackColor = false;
-            // 
             // button4
             // 
             button4.BackColor = Color.MidnightBlue;
             button4.Enabled = false;
-            button4.Location = new Point(40, 407);
+            button4.Location = new Point(109, 318);
             button4.Name = "button4";
-            button4.Size = new Size(275, 10);
+            button4.Size = new Size(450, 11);
             button4.TabIndex = 62;
             button4.UseVisualStyleBackColor = false;
             // 
@@ -138,29 +109,19 @@
             // 
             button3.BackColor = Color.MidnightBlue;
             button3.Enabled = false;
-            button3.Location = new Point(40, 361);
+            button3.Location = new Point(109, 364);
             button3.Name = "button3";
-            button3.Size = new Size(450, 10);
+            button3.Size = new Size(450, 11);
             button3.TabIndex = 61;
             button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.MidnightBlue;
-            button2.Enabled = false;
-            button2.Location = new Point(40, 309);
-            button2.Name = "button2";
-            button2.Size = new Size(450, 10);
-            button2.TabIndex = 60;
-            button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
             button1.BackColor = Color.MidnightBlue;
             button1.Enabled = false;
-            button1.Location = new Point(40, 258);
+            button1.Location = new Point(109, 261);
             button1.Name = "button1";
-            button1.Size = new Size(450, 10);
+            button1.Size = new Size(450, 11);
             button1.TabIndex = 59;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -168,9 +129,9 @@
             // 
             btn2nousar.BackColor = Color.MidnightBlue;
             btn2nousar.Enabled = false;
-            btn2nousar.Location = new Point(40, 222);
+            btn2nousar.Location = new Point(109, 225);
             btn2nousar.Name = "btn2nousar";
-            btn2nousar.Size = new Size(275, 2);
+            btn2nousar.Size = new Size(450, 10);
             btn2nousar.TabIndex = 58;
             btn2nousar.UseVisualStyleBackColor = false;
             // 
@@ -180,7 +141,7 @@
             txtTelefono.BorderStyle = BorderStyle.None;
             txtTelefono.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtTelefono.ForeColor = Color.MidnightBlue;
-            txtTelefono.Location = new Point(46, 377);
+            txtTelefono.Location = new Point(110, 277);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(269, 40);
             txtTelefono.TabIndex = 57;
@@ -194,41 +155,13 @@
             txtCorreo.BorderStyle = BorderStyle.None;
             txtCorreo.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtCorreo.ForeColor = Color.MidnightBlue;
-            txtCorreo.Location = new Point(46, 228);
+            txtCorreo.Location = new Point(110, 231);
             txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(434, 40);
+            txtCorreo.Size = new Size(435, 40);
             txtCorreo.TabIndex = 54;
             txtCorreo.Text = "Correo";
             txtCorreo.Enter += txtCorreo_Enter;
             txtCorreo.Leave += txtCorreo_Leave;
-            // 
-            // cmbTipoUsuario
-            // 
-            cmbTipoUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbTipoUsuario.FlatStyle = FlatStyle.Flat;
-            cmbTipoUsuario.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbTipoUsuario.ForeColor = Color.MidnightBlue;
-            cmbTipoUsuario.FormattingEnabled = true;
-            cmbTipoUsuario.ItemHeight = 51;
-            cmbTipoUsuario.Items.AddRange(new object[] { "Cliente", "Empleado", "Administrador" });
-            cmbTipoUsuario.Location = new Point(120, 140);
-            cmbTipoUsuario.Name = "cmbTipoUsuario";
-            cmbTipoUsuario.Size = new Size(334, 59);
-            cmbTipoUsuario.TabIndex = 30;
-            // 
-            // txtApellido
-            // 
-            txtApellido.BackColor = Color.White;
-            txtApellido.BorderStyle = BorderStyle.None;
-            txtApellido.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtApellido.ForeColor = Color.MidnightBlue;
-            txtApellido.Location = new Point(354, 190);
-            txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(202, 40);
-            txtApellido.TabIndex = 53;
-            txtApellido.Text = "Apellido";
-            txtApellido.Enter += txtApellido_Enter;
-            txtApellido.Leave += txtApellido_Leave;
             // 
             // txtNombre
             // 
@@ -236,7 +169,7 @@
             txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Font = new Font("Sans Serif Collection", 11.25F);
             txtNombre.ForeColor = Color.MidnightBlue;
-            txtNombre.Location = new Point(46, 190);
+            txtNombre.Location = new Point(110, 195);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(255, 40);
             txtNombre.TabIndex = 52;
@@ -249,7 +182,7 @@
             btnRegistrar.FlatStyle = FlatStyle.Flat;
             btnRegistrar.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegistrar.ForeColor = Color.FromArgb(255, 170, 200);
-            btnRegistrar.Location = new Point(227, 448);
+            btnRegistrar.Location = new Point(237, 439);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(227, 46);
             btnRegistrar.TabIndex = 3;
@@ -262,7 +195,7 @@
             txtDireccion.BorderStyle = BorderStyle.None;
             txtDireccion.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtDireccion.ForeColor = Color.MidnightBlue;
-            txtDireccion.Location = new Point(46, 331);
+            txtDireccion.Location = new Point(110, 334);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.Size = new Size(444, 40);
             txtDireccion.TabIndex = 67;
@@ -270,19 +203,27 @@
             txtDireccion.Enter += txtDireccion_Enter_1;
             txtDireccion.Leave += txtDireccion_Leave;
             // 
-            // txtContraseña
+            // txtIDCliente
             // 
-            txtContraseña.BackColor = Color.White;
-            txtContraseña.BorderStyle = BorderStyle.None;
-            txtContraseña.Font = new Font("Sans Serif Collection", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtContraseña.ForeColor = Color.MidnightBlue;
-            txtContraseña.Location = new Point(46, 274);
-            txtContraseña.Name = "txtContraseña";
-            txtContraseña.Size = new Size(444, 40);
-            txtContraseña.TabIndex = 55;
-            txtContraseña.Text = "Contraseña";
-            txtContraseña.Enter += txtContraseña_Enter;
-            txtContraseña.Leave += txtContraseña_Leave;
+            txtIDCliente.BackColor = Color.White;
+            txtIDCliente.BorderStyle = BorderStyle.None;
+            txtIDCliente.Font = new Font("Sans Serif Collection", 11.25F);
+            txtIDCliente.ForeColor = Color.MidnightBlue;
+            txtIDCliente.Location = new Point(110, 149);
+            txtIDCliente.Name = "txtIDCliente";
+            txtIDCliente.Size = new Size(255, 40);
+            txtIDCliente.TabIndex = 68;
+            txtIDCliente.Text = "ID";
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.MidnightBlue;
+            button2.Enabled = false;
+            button2.Location = new Point(109, 179);
+            button2.Name = "button2";
+            button2.Size = new Size(450, 10);
+            button2.TabIndex = 69;
+            button2.UseVisualStyleBackColor = false;
             // 
             // FrmCrearUsuario
             // 
@@ -302,21 +243,17 @@
 
         private Panel panelCrearUsuario;
         private Button btnRegistrar;
-        private TextBox txtApellido;
         private TextBox txtNombre;
-        private ComboBox cmbTipoUsuario;
         private TextBox txtCorreo;
         private TextBox txtTelefono;
-        private TextBox txtContraseña;
-        private Button button5;
         private Button button4;
         private Button button3;
-        private Button button2;
         private Button button1;
         private Button btn2nousar;
-        private Label lblTipoUsuario;
         private FontAwesome.Sharp.IconPictureBox iconRegistrate;
         private Label lblTitleR;
         private TextBox txtDireccion;
+        private Button button2;
+        private TextBox txtIDCliente;
     }
 }
