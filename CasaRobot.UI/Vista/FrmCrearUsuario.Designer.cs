@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panelCrearUsuario = new Panel();
+            button2 = new Button();
+            txtIDCliente = new TextBox();
             iconRegistrate = new FontAwesome.Sharp.IconPictureBox();
             lblTitleR = new Label();
             button4 = new Button();
@@ -40,8 +42,6 @@
             txtNombre = new TextBox();
             btnRegistrar = new Button();
             txtDireccion = new TextBox();
-            txtIDCliente = new TextBox();
-            button2 = new Button();
             panelCrearUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconRegistrate).BeginInit();
             SuspendLayout();
@@ -69,6 +69,28 @@
             panelCrearUsuario.Name = "panelCrearUsuario";
             panelCrearUsuario.Size = new Size(639, 518);
             panelCrearUsuario.TabIndex = 14;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.MidnightBlue;
+            button2.Enabled = false;
+            button2.Location = new Point(109, 179);
+            button2.Name = "button2";
+            button2.Size = new Size(450, 10);
+            button2.TabIndex = 69;
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // txtIDCliente
+            // 
+            txtIDCliente.BackColor = Color.White;
+            txtIDCliente.BorderStyle = BorderStyle.None;
+            txtIDCliente.Font = new Font("Sans Serif Collection", 11.25F);
+            txtIDCliente.ForeColor = Color.MidnightBlue;
+            txtIDCliente.Location = new Point(110, 149);
+            txtIDCliente.Name = "txtIDCliente";
+            txtIDCliente.Size = new Size(255, 40);
+            txtIDCliente.TabIndex = 68;
+            txtIDCliente.Text = "ID";
             // 
             // iconRegistrate
             // 
@@ -188,6 +210,7 @@
             btnRegistrar.TabIndex = 3;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // txtDireccion
             // 
@@ -202,28 +225,6 @@
             txtDireccion.Text = "Direccion";
             txtDireccion.Enter += txtDireccion_Enter_1;
             txtDireccion.Leave += txtDireccion_Leave;
-            // 
-            // txtIDCliente
-            // 
-            txtIDCliente.BackColor = Color.White;
-            txtIDCliente.BorderStyle = BorderStyle.None;
-            txtIDCliente.Font = new Font("Sans Serif Collection", 11.25F);
-            txtIDCliente.ForeColor = Color.MidnightBlue;
-            txtIDCliente.Location = new Point(110, 149);
-            txtIDCliente.Name = "txtIDCliente";
-            txtIDCliente.Size = new Size(255, 40);
-            txtIDCliente.TabIndex = 68;
-            txtIDCliente.Text = "ID";
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.MidnightBlue;
-            button2.Enabled = false;
-            button2.Location = new Point(109, 179);
-            button2.Name = "button2";
-            button2.Size = new Size(450, 10);
-            button2.TabIndex = 69;
-            button2.UseVisualStyleBackColor = false;
             // 
             // FrmCrearUsuario
             // 

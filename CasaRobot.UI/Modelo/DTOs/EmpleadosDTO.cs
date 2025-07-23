@@ -15,5 +15,9 @@ namespace CasaRobot.UI.Modelo.DTOs
         public string Cargo { get; set; }
 
         public string Telefono { get; set; }
+
+        public string NombreUsuario { get; set; }
+
+        public string Clave { get; set; }
     }
 }

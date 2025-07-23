@@ -36,24 +36,6 @@ namespace CasaRobot.UI
             }
         }
 
-        private void txtApellido_Enter(object sender, EventArgs e)
-        {
-            if (txtApellido.Text == "Apellido")
-            {
-                txtApellido.Text = "";
-                txtApellido.ForeColor = Color.Black;
-            }
-
-        }
-
-        private void txtApellido_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtApellido.Text))
-            {
-                txtApellido.Text = "Apellido";
-                txtApellido.ForeColor = Color.Gray;
-            }
-        }
 
         private void txtCorreo_Enter(object sender, EventArgs e)
         {
@@ -72,26 +54,6 @@ namespace CasaRobot.UI
                 txtCorreo.ForeColor = Color.Gray;
             }
 
-        }
-
-        private void txtContraseña_Enter(object sender, EventArgs e)
-        {
-            if (txtContraseña.Text == "Contraseña")
-            {
-                txtContraseña.Text = "";
-                txtContraseña.ForeColor = Color.Black;
-                txtContraseña.UseSystemPasswordChar = true;
-            }
-        }
-
-        private void txtContraseña_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtContraseña.Text))
-            {
-                txtContraseña.Text = "Contraseña";
-                txtContraseña.ForeColor = Color.Gray;
-                txtContraseña.UseSystemPasswordChar = false;
-            }
         }
 
 
@@ -130,6 +92,11 @@ namespace CasaRobot.UI
                 txtTelefono.Text = "Teléfono";
                 txtTelefono.ForeColor = Color.Gray;
             }
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

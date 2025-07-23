@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace CasaRobot.UI.Controlador
 {
-    public class APIClienteCasaRobot
+    public class APIClientesCasaRobot
     {
         private readonly HttpClient _httpClient;
         private readonly string _baseurl;
 
-        public APIClienteCasaRobot(string baseurl)
+        public APIClientesCasaRobot(string baseurl)
         {
             _baseurl = baseurl.TrimEnd('/');
             _httpClient = new HttpClient();
@@ -27,6 +27,13 @@ namespace CasaRobot.UI.Controlador
             return JsonConvert .DeserializeObject<T>(contenido);
         }
 
-
+        public async Task<T> PostAsync<T>(string endpoint, object data)
+        {
+            var contenido = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+            var respuesta = await _httpClient.PostAsync($"{_baseurl}/{endpoint}", contenido);
+            respuesta.EnsureSuccessStatusCode();
+            var responseContent = await respuesta.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<T>(responseContent);
+        }
     }
 }
