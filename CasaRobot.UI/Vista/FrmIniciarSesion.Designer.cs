@@ -156,7 +156,7 @@
             panelIniciar.Name = "panelIniciar";
             panelIniciar.Size = new Size(405, 504);
             panelIniciar.TabIndex = 11;
-            panelIniciar.Paint += panelIniciar_Paint;
+   
             // 
             // iconUser
             // 
@@ -232,8 +232,7 @@
             txtIngresarUsuario.Size = new Size(325, 43);
             txtIngresarUsuario.TabIndex = 1;
             txtIngresarUsuario.Text = "Usuario";
-            txtIngresarUsuario.Enter += textIngresarUsuario_Enter;
-            txtIngresarUsuario.Leave += textIngresarUsuario_Leave;
+            
             // 
             // btnIngresar
             // 
@@ -248,6 +247,7 @@
             btnIngresar.TabStop = false;
             btnIngresar.Text = "Iniciar Sesion";
             btnIngresar.UseVisualStyleBackColor = false;
+            btnIngresar.Click += btnIngresar_Click;
             // 
             // FrmIniciaSesion
             // 

@@ -1,8 +1,10 @@
 ﻿using Microsoft.VisualBasic.Devices;
 using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -60,6 +62,11 @@ namespace CasaRobot.UI
         }
 
         private void panelIniciar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
         {
 
         }
