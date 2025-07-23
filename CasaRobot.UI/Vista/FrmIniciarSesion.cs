@@ -28,12 +28,12 @@ namespace CasaRobot.UI
             _apiClientesCasaRobot = new APIClientesCasaRobot(BaseUrl);
             this.Load += FrmIniciaSesion_Load;
         }
-   
+
 
 
         private void FrmIniciaSesion_Load(object? sender, EventArgs e)
         {
-           
+
         }
 
         private void txtContraseña_Enter(object sender, EventArgs e)
@@ -56,31 +56,15 @@ namespace CasaRobot.UI
             }
         }
 
-        private void textIngresarUsuario_Enter(object sender, EventArgs e)
+
+
+
+
+        private async void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (txtIngresarUsuario.Text == "Usuario")
-            {
-                txtIngresarUsuario.Text = "";
-                txtIngresarUsuario.ForeColor = Color.Black;
-            }
-        }
 
-        private void textIngresarUsuario_Leave(object sender, EventArgs e)
-        {
-            if (txtIngresarUsuario.Text == "")
-            {
-                txtIngresarUsuario.Text = "Usuario";
-                txtIngresarUsuario.ForeColor = Color.Silver;
-            }
-        }
-
-       
-
-        private async void btnIngresar_Click(object sender, EventArgs e) 
-        { 
-        
             try
-                {
+            {
                 // Validar que no estén vacíos los campos
                 if (string.IsNullOrWhiteSpace(txtIngresarUsuario.Text) || txtIngresarUsuario.Text == "Usuario" ||
                     string.IsNullOrWhiteSpace(txtContraseña.Text) || txtContraseña.Text == "Contraseña")
@@ -109,10 +93,29 @@ namespace CasaRobot.UI
                     MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-                catch (Exception ex)
-                 {
+            catch (Exception ex)
+            {
                 MessageBox.Show($"Error al intentar iniciar sesión: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtIngresarUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtIngresarUsuario.Text == "Usuario")
+            {
+                txtIngresarUsuario.Text = "";
+                txtIngresarUsuario.ForeColor = Color.MidnightBlue;
+            }
+        }
+
+        private void txtIngresarUsuario_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtIngresarUsuario.Text))
+            {
+                txtIngresarUsuario.Text = "Usuario";
+                txtIngresarUsuario.ForeColor = Color.Silver;
+            }   
+        }
     }
+
 }

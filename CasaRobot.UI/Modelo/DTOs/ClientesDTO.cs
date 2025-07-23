@@ -19,7 +19,6 @@ namespace CasaRobot.UI.Modelo.DTOs
             public string Telefono { get; set; }
 
             public string Direccion { get; set; }
-
         }
     }
 

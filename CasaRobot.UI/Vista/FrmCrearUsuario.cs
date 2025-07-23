@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CasaRobot.UI.Vista;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,88 +16,43 @@ namespace CasaRobot.UI
         public FrmCrearUsuario()
         {
             InitializeComponent();
+            cmbTipoUsuario.Items.Add("Cliente");
+            cmbTipoUsuario.Items.Add("Empleado");
+            cmbTipoUsuario.SelectedIndex = -1;
+            cmbTipoUsuario.ItemHeight = 20;
+            cmbTipoUsuario.MaxDropDownItems = 2;
+            cmbTipoUsuario.SelectedIndexChanged += cmbTipoUsuario_SelectedIndexChanged;
+          
+
         }
 
-
-        private void txtNombre_Enter(object sender, EventArgs e)
+        private void cmbTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "Nombre")
+            string tipo = cmbTipoUsuario.SelectedItem.ToString();
+
+            if (tipo == "Cliente")
             {
-                txtNombre.Text = "";
-                txtNombre.ForeColor = Color.Black;
+                FrmCrearCliente frmCliente = new FrmCrearCliente();
+                CargarFormularioEnPanel(frmCliente);
+            }
+            else if (tipo == "Empleado")
+            {
+                FrmCrearEmpleado frmEmpleado = new FrmCrearEmpleado();
+                CargarFormularioEnPanel(frmEmpleado);
             }
         }
-
-        private void txtNombre_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            private void CargarFormularioEnPanel(Form formulario)
             {
-                txtNombre.Text = "Nombre";
-                txtNombre.ForeColor = Color.Gray;
-            }
+            formulario.TopLevel = false;
+            formulario.FormBorderStyle = FormBorderStyle.None;
+            formulario.Dock = DockStyle.Fill;
+
+            // Limpiar y mostrar el nuevo formulario
+            panelContenedor.Controls.Clear();
+            panelContenedor.Controls.Add(formulario);
+            formulario.Show();
         }
-
-
-        private void txtCorreo_Enter(object sender, EventArgs e)
-        {
-            if (txtCorreo.Text == "Correo")
-            {
-                txtCorreo.Text = "";
-                txtCorreo.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtCorreo_Leave(object sender, EventArgs e)
-        {
-            if (txtCorreo.Text == "")
-            {
-                txtCorreo.Text = "Correo";
-                txtCorreo.ForeColor = Color.Gray;
-            }
-
-        }
-
-
-
-        private void txtDireccion_Enter_1(object sender, EventArgs e)
-        {
-            if (txtDireccion.Text == "Dirección")
-            {
-                txtDireccion.Text = "";
-                txtDireccion.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtDireccion_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtDireccion.Text))
-            {
-                txtDireccion.Text = "Dirección";
-                txtDireccion.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txtTelefono_Enter(object sender, EventArgs e)
-        {
-            if (txtTelefono.Text == "Teléfono")
-            {
-                txtTelefono.Text = "";
-                txtTelefono.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtTelefono_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtTelefono.Text))
-            {
-                txtTelefono.Text = "Teléfono";
-                txtTelefono.ForeColor = Color.Gray;
-            }
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-
-        }
+   
+    
     }
 }

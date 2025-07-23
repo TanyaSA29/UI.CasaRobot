@@ -156,7 +156,6 @@
             panelIniciar.Name = "panelIniciar";
             panelIniciar.Size = new Size(405, 504);
             panelIniciar.TabIndex = 11;
-   
             // 
             // iconUser
             // 
@@ -232,7 +231,8 @@
             txtIngresarUsuario.Size = new Size(325, 43);
             txtIngresarUsuario.TabIndex = 1;
             txtIngresarUsuario.Text = "Usuario";
-            
+            txtIngresarUsuario.Enter += txtIngresarUsuario_Enter;
+            txtIngresarUsuario.Leave += txtIngresarUsuario_Leave;
             // 
             // btnIngresar
             // 
