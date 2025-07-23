@@ -45,7 +45,7 @@
             // 
             // panelCrearUsuario
             // 
-            panelCrearUsuario.Anchor = AnchorStyles.None;
+            panelCrearUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelCrearUsuario.BackColor = Color.White;
             panelCrearUsuario.BackgroundImageLayout = ImageLayout.None;
             panelCrearUsuario.Controls.Add(button2);
@@ -60,9 +60,9 @@
             panelCrearUsuario.Controls.Add(txtCargo);
             panelCrearUsuario.Controls.Add(txtNombreUsuario);
             panelCrearUsuario.ForeColor = Color.White;
-            panelCrearUsuario.Location = new Point(1, 0);
+            panelCrearUsuario.Location = new Point(-5, -14);
             panelCrearUsuario.Name = "panelCrearUsuario";
-            panelCrearUsuario.Size = new Size(533, 370);
+            panelCrearUsuario.Size = new Size(539, 384);
             panelCrearUsuario.TabIndex = 15;
             panelCrearUsuario.Paint += panelCrearUsuario_Paint;
             // 

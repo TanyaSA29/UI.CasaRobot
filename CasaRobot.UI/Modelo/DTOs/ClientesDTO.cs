@@ -6,20 +6,17 @@ using System.Threading.Tasks;
 
 namespace CasaRobot.UI.Modelo.DTOs
 {
-    internal class ClientesDTO
+    public class ClientesDTO
     {
-        public partial class Clientes
-        {
-            public int ClienteID { get; set; }
+        public int ClienteID { get; set; }
 
-            public string Nombre { get; set; }
+        public string Nombre { get; set; }
 
-            public string Correo { get; set; }
+        public string Correo { get; set; }
 
-            public string Telefono { get; set; }
+        public string Telefono { get; set; }
 
-            public string Direccion { get; set; }
-        }
+        public string Direccion { get; set; }
     }
 
 }
